@@ -55,12 +55,5 @@ namespace Innovative
             }
             return valid;
         }
-        //public bool Captcha(string login)
-        //{
-        //    var request = (HttpWebRequest)WebRequest.Create("http://srv167471.hoster-test.ru/captcha/gen_captcha.php");
-        //    request.CookieContainer = new CookieContainer();
-        //    var response = (HttpWebRequest)request.GetResponse();
-        //    string captcha_value = response.Cookies["captcha_value"].Value;
-        //}
     }
 }
