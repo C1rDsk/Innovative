@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace Innovative
         private Int32 tmpX;
         private Int32 tmpY;
         private bool flMove = false;
+        public string captchaValue;
         public LoginForm()
         {
             InitializeComponent();
@@ -31,6 +33,10 @@ namespace Innovative
             CloseToolTip.SetToolTip(buttonClose, "Выход"); 
             ToolTip SettingsToolTip = new ToolTip();
             SettingsToolTip.SetToolTip(SettingsButton, "Настройки");
+            webBrowser1.Navigate("https://innosite.000webhostapp.com");
+            
+            //    new MBform(webBrowser1.Document.Cookie);
+            
         }
 
         private void autorizationButton_Click(object sender, EventArgs e)
@@ -62,40 +68,56 @@ namespace Innovative
 
         private void registrationButton_Click(object sender, EventArgs e)
         {
-            if (vali.IsValidEmail(emailTextBox.Text))
+            if (captchaValue==capchaTextBox.Text)
             {
-                if (vali.IsValidLogin(regLoginTextBox.Text))
+                if (vali.IsValidEmail(emailTextBox.Text))
                 {
-                    if (vali.IsValidPassword(regPassTextBox.Text))
+                    if (vali.IsValidLogin(regLoginTextBox.Text))
                     {
-                        db.openConnection();
-                        //запись в таблицу БД
-                        db.registration(regLoginTextBox.Text, regPassTextBox.Text, emailTextBox.Text, phoneMaskedTextBox.Text, nameTextBox.Text);
-                        loginTabControl.SelectedIndex = 1;
-                        emailTextBox.Text = "";
-                        regLoginTextBox.Text = "";
-                        regPassTextBox.Text = "";
-                        confirmationTextBox.Text = "";
-                        nameTextBox.Text = "";
-                        phoneMaskedTextBox.Text = "";
+                        if (vali.IsValidPassword(regPassTextBox.Text))
+                        {
+                            db.openConnection();
+                            //запись в таблицу БД
+                            db.registration(regLoginTextBox.Text, regPassTextBox.Text, emailTextBox.Text, phoneMaskedTextBox.Text, nameTextBox.Text);
+                            loginTabControl.SelectedIndex = 1;
+                            emailTextBox.Text = "";
+                            regLoginTextBox.Text = "";
+                            regPassTextBox.Text = "";
+                            confirmationTextBox.Text = "";
+                            nameTextBox.Text = "";
+                            phoneMaskedTextBox.Text = "";
 
+                        }
+                        else
+                        {
+                            new MBform("Пароль должен состоять минимум из 8 символов: \nтолько латинские символы, цифры и спецсимволы");
+                        }
                     }
                     else
                     {
-                        new MBform("Пароль должен состоять минимум из 8 символов: \nтолько латинские символы, цифры и спецсимволы");
+                        new MBform("Логин должен состоять минимум из 4 символов:\nнеобходимо использовать только латинские символы и цифры");
                     }
                 }
                 else
                 {
-                    new MBform("Логин должен состоять минимум из 4 символов:\nнеобходимо использовать только латинские символы и цифры");
+                    new MBform("Некорректный почтовый адрес");
                 }
+
             }
             else
             {
-                new MBform("Некорректный почтовый адрес");
+
+                webBrowser1.Refresh();
+                string str = webBrowser1.Document.Cookie;
+                string[] mas = new string[3];
+                if (str != null)
+                {
+                    mas = str.Split('=');
+                    captchaValue = mas[2];
+                }
+                new MBform("Некорректно введена capcha");
             }
         }
-
         private void authRegButton_Click_1(object sender, EventArgs e)
         {
             authRegButton.ForeColor = Color.Black;
@@ -186,7 +208,13 @@ namespace Innovative
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-
+            string[] mas= new string[3];
+            string str = webBrowser1.Document.Cookie;
+            if (str != null)
+            {
+                mas = str.Split('=');
+                captchaValue = mas[2];
+            }
         }
     }
     

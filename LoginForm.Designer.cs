@@ -30,6 +30,7 @@
         {
             this.loginTabControl = new System.Windows.Forms.TabControl();
             this.autoTabPage = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.buttonClose = new System.Windows.Forms.Button();
@@ -43,6 +44,8 @@
             this.authPassTextBox = new System.Windows.Forms.TextBox();
             this.authLoginTextBox = new System.Windows.Forms.TextBox();
             this.regTabPage = new System.Windows.Forms.TabPage();
+            this.capchaTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.phoneMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -68,7 +71,6 @@
             this.recoveryButton1 = new System.Windows.Forms.Button();
             this.loginTextBox = new System.Windows.Forms.TextBox();
             this.FullScreenPanel = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.loginTabControl.SuspendLayout();
             this.autoTabPage.SuspendLayout();
             this.regTabPage.SuspendLayout();
@@ -82,7 +84,7 @@
             this.loginTabControl.Controls.Add(this.autoTabPage);
             this.loginTabControl.Controls.Add(this.regTabPage);
             this.loginTabControl.Controls.Add(this.recTabPage);
-            this.loginTabControl.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginTabControl.ItemSize = new System.Drawing.Size(0, 1);
             this.loginTabControl.Location = new System.Drawing.Point(-5, -12);
             this.loginTabControl.Margin = new System.Windows.Forms.Padding(0);
@@ -110,7 +112,7 @@
             this.autoTabPage.Controls.Add(this.autorizationButton);
             this.autoTabPage.Controls.Add(this.authPassTextBox);
             this.autoTabPage.Controls.Add(this.authLoginTextBox);
-            this.autoTabPage.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.autoTabPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.autoTabPage.Location = new System.Drawing.Point(4, 5);
             this.autoTabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.autoTabPage.Name = "autoTabPage";
@@ -123,6 +125,26 @@
             this.autoTabPage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseMove);
             this.autoTabPage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseUp);
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RosyBrown;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button5.Location = new System.Drawing.Point(463, 550);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(60, 60);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "A";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // SettingsButton
             // 
             this.SettingsButton.BackColor = System.Drawing.Color.Transparent;
@@ -134,7 +156,7 @@
             this.SettingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RosyBrown;
             this.SettingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingsButton.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SettingsButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.SettingsButton.Location = new System.Drawing.Point(1, 551);
             this.SettingsButton.Margin = new System.Windows.Forms.Padding(4);
@@ -153,11 +175,11 @@
             this.checkBox2.FlatAppearance.BorderSize = 2;
             this.checkBox2.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkSeaGreen;
             this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox2.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox2.Location = new System.Drawing.Point(170, 293);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(194, 28);
+            this.checkBox2.Size = new System.Drawing.Size(196, 29);
             this.checkBox2.TabIndex = 4;
             this.checkBox2.Text = "Зайти автономно";
             this.checkBox2.UseVisualStyleBackColor = false;
@@ -172,7 +194,7 @@
             this.buttonClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
             this.buttonClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonClose.Image = global::Innovative.Properties.Resources.exit2;
             this.buttonClose.Location = new System.Drawing.Point(469, 6);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(4);
@@ -186,10 +208,10 @@
             // 
             this.headingLabel.AutoSize = true;
             this.headingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.headingLabel.Font = new System.Drawing.Font("Roboto", 22F);
+            this.headingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
             this.headingLabel.Location = new System.Drawing.Point(132, 59);
             this.headingLabel.Name = "headingLabel";
-            this.headingLabel.Size = new System.Drawing.Size(247, 44);
+            this.headingLabel.Size = new System.Drawing.Size(245, 42);
             this.headingLabel.TabIndex = 9;
             this.headingLabel.Text = "Авторизация";
             // 
@@ -202,11 +224,11 @@
             this.checkBox1.FlatAppearance.BorderSize = 2;
             this.checkBox1.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkSeaGreen;
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox1.Location = new System.Drawing.Point(170, 260);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(134, 28);
+            this.checkBox1.Size = new System.Drawing.Size(136, 29);
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Запомнить";
             this.checkBox1.UseVisualStyleBackColor = false;
@@ -215,10 +237,10 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
-            this.passwordLabel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordLabel.Location = new System.Drawing.Point(39, 221);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(80, 24);
+            this.passwordLabel.Size = new System.Drawing.Size(80, 25);
             this.passwordLabel.TabIndex = 11;
             this.passwordLabel.Text = "Пароль";
             // 
@@ -226,10 +248,10 @@
             // 
             this.loginLabel.AutoSize = true;
             this.loginLabel.BackColor = System.Drawing.Color.Transparent;
-            this.loginLabel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginLabel.Location = new System.Drawing.Point(39, 175);
             this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(123, 24);
+            this.loginLabel.Size = new System.Drawing.Size(121, 25);
             this.loginLabel.TabIndex = 10;
             this.loginLabel.Text = "Login/E-mail";
             // 
@@ -240,7 +262,7 @@
             this.authRecButton.FlatAppearance.BorderColor = System.Drawing.Color.MistyRose;
             this.authRecButton.FlatAppearance.BorderSize = 2;
             this.authRecButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.authRecButton.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.authRecButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.authRecButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.authRecButton.Location = new System.Drawing.Point(144, 345);
             this.authRecButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -258,7 +280,7 @@
             this.authRegButton.FlatAppearance.BorderColor = System.Drawing.Color.MistyRose;
             this.authRegButton.FlatAppearance.BorderSize = 2;
             this.authRegButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.authRegButton.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.authRegButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.authRegButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.authRegButton.Location = new System.Drawing.Point(144, 398);
             this.authRegButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -276,7 +298,7 @@
             this.autorizationButton.FlatAppearance.BorderColor = System.Drawing.Color.MistyRose;
             this.autorizationButton.FlatAppearance.BorderSize = 2;
             this.autorizationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.autorizationButton.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.autorizationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.autorizationButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.autorizationButton.Location = new System.Drawing.Point(156, 492);
             this.autorizationButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -291,12 +313,12 @@
             // 
             this.authPassTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(230)))));
             this.authPassTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.authPassTextBox.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.authPassTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.authPassTextBox.Location = new System.Drawing.Point(184, 219);
             this.authPassTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.authPassTextBox.Name = "authPassTextBox";
             this.authPassTextBox.PasswordChar = '*';
-            this.authPassTextBox.Size = new System.Drawing.Size(270, 32);
+            this.authPassTextBox.Size = new System.Drawing.Size(270, 30);
             this.authPassTextBox.TabIndex = 1;
             this.authPassTextBox.UseSystemPasswordChar = true;
             this.authPassTextBox.Enter += new System.EventHandler(this.Entr);
@@ -306,12 +328,12 @@
             // 
             this.authLoginTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(230)))));
             this.authLoginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.authLoginTextBox.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.authLoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.authLoginTextBox.ForeColor = System.Drawing.Color.Black;
             this.authLoginTextBox.Location = new System.Drawing.Point(184, 172);
             this.authLoginTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.authLoginTextBox.Name = "authLoginTextBox";
-            this.authLoginTextBox.Size = new System.Drawing.Size(270, 32);
+            this.authLoginTextBox.Size = new System.Drawing.Size(270, 30);
             this.authLoginTextBox.TabIndex = 0;
             this.authLoginTextBox.Enter += new System.EventHandler(this.Entr);
             this.authLoginTextBox.Leave += new System.EventHandler(this.LiavMistyRose);
@@ -320,6 +342,8 @@
             // 
             this.regTabPage.BackgroundImage = global::Innovative.Properties.Resources._15;
             this.regTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.regTabPage.Controls.Add(this.capchaTextBox);
+            this.regTabPage.Controls.Add(this.label1);
             this.regTabPage.Controls.Add(this.webBrowser1);
             this.regTabPage.Controls.Add(this.phoneMaskedTextBox);
             this.regTabPage.Controls.Add(this.button3);
@@ -337,7 +361,7 @@
             this.regTabPage.Controls.Add(this.registrationButton);
             this.regTabPage.Controls.Add(this.confirmationTextBox);
             this.regTabPage.Controls.Add(this.emailTextBox);
-            this.regTabPage.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.regTabPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.regTabPage.Location = new System.Drawing.Point(4, 5);
             this.regTabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.regTabPage.Name = "regTabPage";
@@ -350,13 +374,34 @@
             this.regTabPage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseMove);
             this.regTabPage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseUp);
             // 
+            // capchaTextBox
+            // 
+            this.capchaTextBox.BackColor = System.Drawing.Color.Honeydew;
+            this.capchaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.capchaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.capchaTextBox.Location = new System.Drawing.Point(346, 517);
+            this.capchaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.capchaTextBox.Name = "capchaTextBox";
+            this.capchaTextBox.Size = new System.Drawing.Size(152, 30);
+            this.capchaTextBox.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(10, 519);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(235, 25);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Введите код с картинки";
+            // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(142, 398);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Location = new System.Drawing.Point(194, 342);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(245, 95);
+            this.webBrowser1.Size = new System.Drawing.Size(304, 170);
             this.webBrowser1.TabIndex = 16;
             this.webBrowser1.Url = new System.Uri("https://innosite.000webhostapp.com/", System.UriKind.Absolute);
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
@@ -365,12 +410,12 @@
             // 
             this.phoneMaskedTextBox.BackColor = System.Drawing.Color.Honeydew;
             this.phoneMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phoneMaskedTextBox.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.phoneMaskedTextBox.Location = new System.Drawing.Point(215, 346);
+            this.phoneMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.phoneMaskedTextBox.Location = new System.Drawing.Point(215, 305);
             this.phoneMaskedTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.phoneMaskedTextBox.Mask = "+7 (999) 000-0000";
             this.phoneMaskedTextBox.Name = "phoneMaskedTextBox";
-            this.phoneMaskedTextBox.Size = new System.Drawing.Size(283, 32);
+            this.phoneMaskedTextBox.Size = new System.Drawing.Size(283, 30);
             this.phoneMaskedTextBox.TabIndex = 5;
             this.phoneMaskedTextBox.Enter += new System.EventHandler(this.Entr);
             this.phoneMaskedTextBox.Leave += new System.EventHandler(this.LiavGreen);
@@ -385,7 +430,7 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Image = global::Innovative.Properties.Resources.exitik1;
             this.button3.Location = new System.Drawing.Point(0, 6);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
@@ -405,7 +450,7 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Image = global::Innovative.Properties.Resources.exit2;
             this.button1.Location = new System.Drawing.Point(469, 6);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
@@ -419,11 +464,11 @@
             // 
             this.headingLabel2.AutoSize = true;
             this.headingLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.headingLabel2.Font = new System.Drawing.Font("Roboto", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.headingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.headingLabel2.ForeColor = System.Drawing.Color.Black;
             this.headingLabel2.Location = new System.Drawing.Point(135, 36);
             this.headingLabel2.Name = "headingLabel2";
-            this.headingLabel2.Size = new System.Drawing.Size(241, 44);
+            this.headingLabel2.Size = new System.Drawing.Size(239, 42);
             this.headingLabel2.TabIndex = 9;
             this.headingLabel2.Text = "Регистрация";
             // 
@@ -431,11 +476,11 @@
             // 
             this.nameTextBox.BackColor = System.Drawing.Color.Honeydew;
             this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nameTextBox.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameTextBox.Location = new System.Drawing.Point(215, 306);
+            this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameTextBox.Location = new System.Drawing.Point(215, 265);
             this.nameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(283, 32);
+            this.nameTextBox.Size = new System.Drawing.Size(283, 30);
             this.nameTextBox.TabIndex = 4;
             this.nameTextBox.Enter += new System.EventHandler(this.Entr);
             this.nameTextBox.Leave += new System.EventHandler(this.LiavGreen);
@@ -444,11 +489,11 @@
             // 
             this.regPassTextBox.BackColor = System.Drawing.Color.Honeydew;
             this.regPassTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.regPassTextBox.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.regPassTextBox.Location = new System.Drawing.Point(215, 206);
+            this.regPassTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.regPassTextBox.Location = new System.Drawing.Point(215, 165);
             this.regPassTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.regPassTextBox.Name = "regPassTextBox";
-            this.regPassTextBox.Size = new System.Drawing.Size(283, 32);
+            this.regPassTextBox.Size = new System.Drawing.Size(283, 30);
             this.regPassTextBox.TabIndex = 2;
             this.regPassTextBox.Enter += new System.EventHandler(this.Entr);
             this.regPassTextBox.Leave += new System.EventHandler(this.LiavGreen);
@@ -457,11 +502,11 @@
             // 
             this.regLoginTextBox.BackColor = System.Drawing.Color.Honeydew;
             this.regLoginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.regLoginTextBox.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.regLoginTextBox.Location = new System.Drawing.Point(215, 166);
+            this.regLoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.regLoginTextBox.Location = new System.Drawing.Point(215, 125);
             this.regLoginTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.regLoginTextBox.Name = "regLoginTextBox";
-            this.regLoginTextBox.Size = new System.Drawing.Size(283, 32);
+            this.regLoginTextBox.Size = new System.Drawing.Size(283, 30);
             this.regLoginTextBox.TabIndex = 1;
             this.regLoginTextBox.Enter += new System.EventHandler(this.Entr);
             this.regLoginTextBox.Leave += new System.EventHandler(this.LiavGreen);
@@ -470,10 +515,10 @@
             // 
             this.phoneLabel.AutoSize = true;
             this.phoneLabel.BackColor = System.Drawing.Color.Transparent;
-            this.phoneLabel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.phoneLabel.Location = new System.Drawing.Point(17, 348);
+            this.phoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.phoneLabel.Location = new System.Drawing.Point(17, 307);
             this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(93, 24);
+            this.phoneLabel.Size = new System.Drawing.Size(99, 25);
             this.phoneLabel.TabIndex = 15;
             this.phoneLabel.Text = "Телефон";
             // 
@@ -481,10 +526,10 @@
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nameLabel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameLabel.Location = new System.Drawing.Point(20, 308);
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.Location = new System.Drawing.Point(20, 267);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(50, 24);
+            this.nameLabel.Size = new System.Drawing.Size(54, 25);
             this.nameLabel.TabIndex = 14;
             this.nameLabel.Text = "Имя";
             // 
@@ -492,10 +537,10 @@
             // 
             this.passwordLabel2.AutoSize = true;
             this.passwordLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.passwordLabel2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passwordLabel2.Location = new System.Drawing.Point(17, 208);
+            this.passwordLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordLabel2.Location = new System.Drawing.Point(17, 167);
             this.passwordLabel2.Name = "passwordLabel2";
-            this.passwordLabel2.Size = new System.Drawing.Size(80, 24);
+            this.passwordLabel2.Size = new System.Drawing.Size(80, 25);
             this.passwordLabel2.TabIndex = 12;
             this.passwordLabel2.Text = "Пароль";
             // 
@@ -503,10 +548,10 @@
             // 
             this.loginLabel2.AutoSize = true;
             this.loginLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.loginLabel2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loginLabel2.Location = new System.Drawing.Point(20, 168);
+            this.loginLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginLabel2.Location = new System.Drawing.Point(20, 127);
             this.loginLabel2.Name = "loginLabel2";
-            this.loginLabel2.Size = new System.Drawing.Size(67, 24);
+            this.loginLabel2.Size = new System.Drawing.Size(68, 25);
             this.loginLabel2.TabIndex = 11;
             this.loginLabel2.Text = "Логин";
             // 
@@ -514,10 +559,10 @@
             // 
             this.passwordLabel3.AutoSize = true;
             this.passwordLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.passwordLabel3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passwordLabel3.Location = new System.Drawing.Point(17, 246);
+            this.passwordLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordLabel3.Location = new System.Drawing.Point(17, 205);
             this.passwordLabel3.Name = "passwordLabel3";
-            this.passwordLabel3.Size = new System.Drawing.Size(167, 48);
+            this.passwordLabel3.Size = new System.Drawing.Size(171, 50);
             this.passwordLabel3.TabIndex = 13;
             this.passwordLabel3.Text = "Подтверждение \r\nпароля";
             // 
@@ -525,10 +570,10 @@
             // 
             this.emailLabel.AutoSize = true;
             this.emailLabel.BackColor = System.Drawing.Color.Transparent;
-            this.emailLabel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.emailLabel.Location = new System.Drawing.Point(17, 128);
+            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.emailLabel.Location = new System.Drawing.Point(17, 87);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(66, 24);
+            this.emailLabel.Size = new System.Drawing.Size(67, 25);
             this.emailLabel.TabIndex = 10;
             this.emailLabel.Text = "E-mail";
             // 
@@ -537,8 +582,8 @@
             this.registrationButton.BackColor = System.Drawing.Color.Transparent;
             this.registrationButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.registrationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registrationButton.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.registrationButton.Location = new System.Drawing.Point(142, 517);
+            this.registrationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registrationButton.Location = new System.Drawing.Point(142, 550);
             this.registrationButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.registrationButton.Name = "registrationButton";
             this.registrationButton.Size = new System.Drawing.Size(245, 50);
@@ -551,11 +596,11 @@
             // 
             this.confirmationTextBox.BackColor = System.Drawing.Color.Honeydew;
             this.confirmationTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.confirmationTextBox.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.confirmationTextBox.Location = new System.Drawing.Point(215, 246);
+            this.confirmationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.confirmationTextBox.Location = new System.Drawing.Point(215, 205);
             this.confirmationTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.confirmationTextBox.Name = "confirmationTextBox";
-            this.confirmationTextBox.Size = new System.Drawing.Size(283, 32);
+            this.confirmationTextBox.Size = new System.Drawing.Size(283, 30);
             this.confirmationTextBox.TabIndex = 3;
             this.confirmationTextBox.Enter += new System.EventHandler(this.Entr);
             this.confirmationTextBox.Leave += new System.EventHandler(this.LiavGreen);
@@ -565,11 +610,11 @@
             this.emailTextBox.BackColor = System.Drawing.Color.Honeydew;
             this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.emailTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.emailTextBox.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.emailTextBox.Location = new System.Drawing.Point(215, 126);
+            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.emailTextBox.Location = new System.Drawing.Point(215, 85);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(283, 32);
+            this.emailTextBox.Size = new System.Drawing.Size(283, 30);
             this.emailTextBox.TabIndex = 0;
             this.emailTextBox.Enter += new System.EventHandler(this.Entr);
             this.emailTextBox.Leave += new System.EventHandler(this.LiavGreen);
@@ -584,7 +629,7 @@
             this.recTabPage.Controls.Add(this.label3);
             this.recTabPage.Controls.Add(this.recoveryButton1);
             this.recTabPage.Controls.Add(this.loginTextBox);
-            this.recTabPage.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.recTabPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.recTabPage.Location = new System.Drawing.Point(4, 5);
             this.recTabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.recTabPage.Name = "recTabPage";
@@ -606,7 +651,7 @@
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Image = global::Innovative.Properties.Resources.exitik1;
             this.button4.Location = new System.Drawing.Point(-1, 5);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
@@ -626,7 +671,7 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Image = global::Innovative.Properties.Resources.exit2;
             this.button2.Location = new System.Drawing.Point(468, 6);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
@@ -640,11 +685,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(32, 247);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 24);
+            this.label2.Size = new System.Drawing.Size(121, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Login/E-mail";
             // 
@@ -652,11 +697,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Roboto", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(29, 59);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(439, 44);
+            this.label3.Size = new System.Drawing.Size(442, 42);
             this.label3.TabIndex = 4;
             this.label3.Text = "Восстановление пароля";
             // 
@@ -665,7 +710,7 @@
             this.recoveryButton1.BackColor = System.Drawing.Color.Transparent;
             this.recoveryButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.recoveryButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.recoveryButton1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.recoveryButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.recoveryButton1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.recoveryButton1.Location = new System.Drawing.Point(269, 327);
             this.recoveryButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -680,11 +725,11 @@
             // 
             this.loginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.loginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.loginTextBox.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginTextBox.Location = new System.Drawing.Point(172, 245);
             this.loginTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.Size = new System.Drawing.Size(294, 32);
+            this.loginTextBox.Size = new System.Drawing.Size(294, 30);
             this.loginTextBox.TabIndex = 0;
             // 
             // FullScreenPanel
@@ -693,7 +738,7 @@
             this.FullScreenPanel.BackColor = System.Drawing.Color.Transparent;
             this.FullScreenPanel.Controls.Add(this.loginTabControl);
             this.FullScreenPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FullScreenPanel.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FullScreenPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FullScreenPanel.Location = new System.Drawing.Point(0, 0);
             this.FullScreenPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FullScreenPanel.Name = "FullScreenPanel";
@@ -702,26 +747,6 @@
             this.FullScreenPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseDown);
             this.FullScreenPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseMove);
             this.FullScreenPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseUp);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RosyBrown;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Roboto", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button5.Location = new System.Drawing.Point(463, 550);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(60, 60);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "A";
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // LoginForm
             // 
@@ -790,6 +815,8 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Button SettingsButton;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox capchaTextBox;
+        private System.Windows.Forms.Label label1;
     }
 }
 

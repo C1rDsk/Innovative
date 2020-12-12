@@ -167,9 +167,7 @@
   <ItemGroup>
     <None Include="Resources\16.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\16.png" />
   </ItemGroup>
