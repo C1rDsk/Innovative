@@ -55,7 +55,13 @@ namespace Innovative
 
         private void button5_Click(object sender, EventArgs e)
         {
+            AboutForm af = new AboutForm();
+            af.Show();
+        }
 
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new SettingsForm();
         }
 
         public WorkForm(string login, string password, bool offline,string path)

@@ -24,8 +24,8 @@ namespace Innovative
                         foreach (var file in zip.Entries)
                         {
                             FilesList.Items.Add(file.FileName);
-                            FilesList.Items[FilesList.Items.Count - 1].Group = FilesList.Groups[1];
-                            FilesList.Items[FilesList.Items.Count - 1].ImageIndex = 2;
+                         //   FilesList.Items[FilesList.Items.Count - 1].Group = FilesList.Groups[1];
+                         //   FilesList.Items[FilesList.Items.Count - 1].ImageIndex = 2;
                         }
                     }
                 }
