@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.loginTabControl = new System.Windows.Forms.TabControl();
+            this.FullScreenPanel = new System.Windows.Forms.Panel();
             this.autoTabPage = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
+            this.userGuideButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.buttonClose = new System.Windows.Forms.Button();
@@ -45,11 +46,11 @@
             this.authLoginTextBox = new System.Windows.Forms.TextBox();
             this.regTabPage = new System.Windows.Forms.TabPage();
             this.capchaTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.promptLabel = new System.Windows.Forms.Label();
+            this.captchaWebBrowser = new System.Windows.Forms.WebBrowser();
             this.phoneMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.headingLabel2 = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.regPassTextBox = new System.Windows.Forms.TextBox();
@@ -64,18 +65,17 @@
             this.confirmationTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.recTabPage = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.backButton2 = new System.Windows.Forms.Button();
+            this.closeButton2 = new System.Windows.Forms.Button();
+            this.loginLlabel = new System.Windows.Forms.Label();
+            this.headingLabel3 = new System.Windows.Forms.Label();
             this.recoveryButton1 = new System.Windows.Forms.Button();
             this.loginTextBox = new System.Windows.Forms.TextBox();
-            this.FullScreenPanel = new System.Windows.Forms.Panel();
             this.loginTabControl.SuspendLayout();
+            this.FullScreenPanel.SuspendLayout();
             this.autoTabPage.SuspendLayout();
             this.regTabPage.SuspendLayout();
             this.recTabPage.SuspendLayout();
-            this.FullScreenPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // loginTabControl
@@ -95,11 +95,27 @@
             this.loginTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.loginTabControl.TabIndex = 0;
             // 
+            // FullScreenPanel
+            // 
+            this.FullScreenPanel.AutoSize = true;
+            this.FullScreenPanel.BackColor = System.Drawing.Color.Transparent;
+            this.FullScreenPanel.Controls.Add(this.loginTabControl);
+            this.FullScreenPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FullScreenPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FullScreenPanel.Location = new System.Drawing.Point(0, 0);
+            this.FullScreenPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FullScreenPanel.Name = "FullScreenPanel";
+            this.FullScreenPanel.Size = new System.Drawing.Size(523, 604);
+            this.FullScreenPanel.TabIndex = 0;
+            this.FullScreenPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseDown);
+            this.FullScreenPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseMove);
+            this.FullScreenPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseUp);
+            // 
             // autoTabPage
             // 
             this.autoTabPage.BackgroundImage = global::Innovative.Properties.Resources._14;
             this.autoTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.autoTabPage.Controls.Add(this.button5);
+            this.autoTabPage.Controls.Add(this.userGuideButton);
             this.autoTabPage.Controls.Add(this.SettingsButton);
             this.autoTabPage.Controls.Add(this.checkBox2);
             this.autoTabPage.Controls.Add(this.buttonClose);
@@ -125,26 +141,26 @@
             this.autoTabPage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseMove);
             this.autoTabPage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseUp);
             // 
-            // button5
+            // userGuideButton
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RosyBrown;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button5.Location = new System.Drawing.Point(463, 550);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(60, 60);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "?";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.userGuideButton.BackColor = System.Drawing.Color.Transparent;
+            this.userGuideButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.userGuideButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.userGuideButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.userGuideButton.FlatAppearance.BorderSize = 0;
+            this.userGuideButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RosyBrown;
+            this.userGuideButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.userGuideButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userGuideButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.userGuideButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.userGuideButton.Location = new System.Drawing.Point(463, 550);
+            this.userGuideButton.Margin = new System.Windows.Forms.Padding(4);
+            this.userGuideButton.Name = "userGuideButton";
+            this.userGuideButton.Size = new System.Drawing.Size(60, 60);
+            this.userGuideButton.TabIndex = 12;
+            this.userGuideButton.Text = "?";
+            this.userGuideButton.UseVisualStyleBackColor = false;
+            this.userGuideButton.Click += new System.EventHandler(this.button5_Click);
             // 
             // SettingsButton
             // 
@@ -240,7 +256,7 @@
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passwordLabel.Location = new System.Drawing.Point(39, 221);
+            this.passwordLabel.Location = new System.Drawing.Point(13, 224);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(80, 25);
             this.passwordLabel.TabIndex = 11;
@@ -251,7 +267,7 @@
             this.loginLabel.AutoSize = true;
             this.loginLabel.BackColor = System.Drawing.Color.Transparent;
             this.loginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loginLabel.Location = new System.Drawing.Point(39, 175);
+            this.loginLabel.Location = new System.Drawing.Point(13, 178);
             this.loginLabel.Name = "loginLabel";
             this.loginLabel.Size = new System.Drawing.Size(121, 25);
             this.loginLabel.TabIndex = 10;
@@ -332,10 +348,10 @@
             this.authLoginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.authLoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.authLoginTextBox.ForeColor = System.Drawing.Color.Black;
-            this.authLoginTextBox.Location = new System.Drawing.Point(184, 172);
+            this.authLoginTextBox.Location = new System.Drawing.Point(139, 176);
             this.authLoginTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.authLoginTextBox.Name = "authLoginTextBox";
-            this.authLoginTextBox.Size = new System.Drawing.Size(270, 30);
+            this.authLoginTextBox.Size = new System.Drawing.Size(263, 30);
             this.authLoginTextBox.TabIndex = 0;
             this.authLoginTextBox.Enter += new System.EventHandler(this.Entr);
             this.authLoginTextBox.Leave += new System.EventHandler(this.LiavMistyRose);
@@ -345,11 +361,11 @@
             this.regTabPage.BackgroundImage = global::Innovative.Properties.Resources._15;
             this.regTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.regTabPage.Controls.Add(this.capchaTextBox);
-            this.regTabPage.Controls.Add(this.label1);
-            this.regTabPage.Controls.Add(this.webBrowser1);
+            this.regTabPage.Controls.Add(this.promptLabel);
+            this.regTabPage.Controls.Add(this.captchaWebBrowser);
             this.regTabPage.Controls.Add(this.phoneMaskedTextBox);
-            this.regTabPage.Controls.Add(this.button3);
-            this.regTabPage.Controls.Add(this.button1);
+            this.regTabPage.Controls.Add(this.backButton);
+            this.regTabPage.Controls.Add(this.closeButton);
             this.regTabPage.Controls.Add(this.headingLabel2);
             this.regTabPage.Controls.Add(this.nameTextBox);
             this.regTabPage.Controls.Add(this.regPassTextBox);
@@ -381,32 +397,32 @@
             this.capchaTextBox.BackColor = System.Drawing.Color.Honeydew;
             this.capchaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.capchaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.capchaTextBox.Location = new System.Drawing.Point(346, 517);
+            this.capchaTextBox.Location = new System.Drawing.Point(303, 517);
             this.capchaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.capchaTextBox.Name = "capchaTextBox";
-            this.capchaTextBox.Size = new System.Drawing.Size(152, 30);
+            this.capchaTextBox.Size = new System.Drawing.Size(195, 30);
             this.capchaTextBox.TabIndex = 17;
             // 
-            // label1
+            // promptLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(10, 519);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 25);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Введите код с картинки";
+            this.promptLabel.AutoSize = true;
+            this.promptLabel.BackColor = System.Drawing.Color.Transparent;
+            this.promptLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.promptLabel.Location = new System.Drawing.Point(10, 519);
+            this.promptLabel.Name = "promptLabel";
+            this.promptLabel.Size = new System.Drawing.Size(235, 25);
+            this.promptLabel.TabIndex = 18;
+            this.promptLabel.Text = "Введите код с картинки";
             // 
-            // webBrowser1
+            // captchaWebBrowser
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(194, 342);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(304, 170);
-            this.webBrowser1.TabIndex = 16;
-            this.webBrowser1.Url = new System.Uri("https://innosite.000webhostapp.com/", System.UriKind.Absolute);
-            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            this.captchaWebBrowser.Location = new System.Drawing.Point(194, 342);
+            this.captchaWebBrowser.Name = "captchaWebBrowser";
+            this.captchaWebBrowser.ScrollBarsEnabled = false;
+            this.captchaWebBrowser.Size = new System.Drawing.Size(304, 170);
+            this.captchaWebBrowser.TabIndex = 16;
+            this.captchaWebBrowser.Url = new System.Uri("https://innosite.000webhostapp.com/", System.UriKind.Absolute);
+            this.captchaWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // phoneMaskedTextBox
             // 
@@ -422,45 +438,45 @@
             this.phoneMaskedTextBox.Enter += new System.EventHandler(this.Entr);
             this.phoneMaskedTextBox.Leave += new System.EventHandler(this.LiavGreen);
             // 
-            // button3
+            // backButton
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Image = global::Innovative.Properties.Resources.exitik1;
-            this.button3.Location = new System.Drawing.Point(0, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(53, 49);
-            this.button3.TabIndex = 7;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.Back);
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
+            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backButton.Image = global::Innovative.Properties.Resources.exitik1;
+            this.backButton.Location = new System.Drawing.Point(0, 6);
+            this.backButton.Margin = new System.Windows.Forms.Padding(4);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(53, 49);
+            this.backButton.TabIndex = 7;
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.Back);
             // 
-            // button1
+            // closeButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Image = global::Innovative.Properties.Resources.exit2;
-            this.button1.Location = new System.Drawing.Point(469, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 49);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Close);
+            this.closeButton.BackColor = System.Drawing.Color.Transparent;
+            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
+            this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.closeButton.Image = global::Innovative.Properties.Resources.exit2;
+            this.closeButton.Location = new System.Drawing.Point(469, 6);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(53, 49);
+            this.closeButton.TabIndex = 8;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.Close);
             // 
             // headingLabel2
             // 
@@ -468,7 +484,7 @@
             this.headingLabel2.BackColor = System.Drawing.Color.Transparent;
             this.headingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.headingLabel2.ForeColor = System.Drawing.Color.Black;
-            this.headingLabel2.Location = new System.Drawing.Point(135, 36);
+            this.headingLabel2.Location = new System.Drawing.Point(135, 16);
             this.headingLabel2.Name = "headingLabel2";
             this.headingLabel2.Size = new System.Drawing.Size(239, 42);
             this.headingLabel2.TabIndex = 9;
@@ -625,10 +641,10 @@
             // 
             this.recTabPage.BackgroundImage = global::Innovative.Properties.Resources._16;
             this.recTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.recTabPage.Controls.Add(this.button4);
-            this.recTabPage.Controls.Add(this.button2);
-            this.recTabPage.Controls.Add(this.label2);
-            this.recTabPage.Controls.Add(this.label3);
+            this.recTabPage.Controls.Add(this.backButton2);
+            this.recTabPage.Controls.Add(this.closeButton2);
+            this.recTabPage.Controls.Add(this.loginLlabel);
+            this.recTabPage.Controls.Add(this.headingLabel3);
             this.recTabPage.Controls.Add(this.recoveryButton1);
             this.recTabPage.Controls.Add(this.loginTextBox);
             this.recTabPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -643,69 +659,69 @@
             this.recTabPage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseMove);
             this.recTabPage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseUp);
             // 
-            // button4
+            // backButton2
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Image = global::Innovative.Properties.Resources.exitik1;
-            this.button4.Location = new System.Drawing.Point(-1, 5);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(53, 49);
-            this.button4.TabIndex = 2;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.Back);
+            this.backButton2.BackColor = System.Drawing.Color.Transparent;
+            this.backButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.backButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButton2.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.backButton2.FlatAppearance.BorderSize = 0;
+            this.backButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
+            this.backButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
+            this.backButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backButton2.Image = global::Innovative.Properties.Resources.exitik1;
+            this.backButton2.Location = new System.Drawing.Point(-1, 5);
+            this.backButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.backButton2.Name = "backButton2";
+            this.backButton2.Size = new System.Drawing.Size(53, 49);
+            this.backButton2.TabIndex = 2;
+            this.backButton2.UseVisualStyleBackColor = false;
+            this.backButton2.Click += new System.EventHandler(this.Back);
             // 
-            // button2
+            // closeButton2
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Image = global::Innovative.Properties.Resources.exit2;
-            this.button2.Location = new System.Drawing.Point(468, 6);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 49);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.Close);
+            this.closeButton2.BackColor = System.Drawing.Color.Transparent;
+            this.closeButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.closeButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton2.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.closeButton2.FlatAppearance.BorderSize = 0;
+            this.closeButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
+            this.closeButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
+            this.closeButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.closeButton2.Image = global::Innovative.Properties.Resources.exit2;
+            this.closeButton2.Location = new System.Drawing.Point(468, 6);
+            this.closeButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.closeButton2.Name = "closeButton2";
+            this.closeButton2.Size = new System.Drawing.Size(53, 49);
+            this.closeButton2.TabIndex = 3;
+            this.closeButton2.UseVisualStyleBackColor = false;
+            this.closeButton2.Click += new System.EventHandler(this.Close);
             // 
-            // label2
+            // loginLlabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(32, 247);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Login/E-mail";
+            this.loginLlabel.AutoSize = true;
+            this.loginLlabel.BackColor = System.Drawing.Color.Transparent;
+            this.loginLlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginLlabel.ForeColor = System.Drawing.Color.White;
+            this.loginLlabel.Location = new System.Drawing.Point(32, 247);
+            this.loginLlabel.Name = "loginLlabel";
+            this.loginLlabel.Size = new System.Drawing.Size(121, 25);
+            this.loginLlabel.TabIndex = 5;
+            this.loginLlabel.Text = "Login/E-mail";
             // 
-            // label3
+            // headingLabel3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(29, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(442, 42);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Восстановление пароля";
+            this.headingLabel3.AutoSize = true;
+            this.headingLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.headingLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.headingLabel3.ForeColor = System.Drawing.Color.White;
+            this.headingLabel3.Location = new System.Drawing.Point(30, 59);
+            this.headingLabel3.Name = "headingLabel3";
+            this.headingLabel3.Size = new System.Drawing.Size(442, 42);
+            this.headingLabel3.TabIndex = 4;
+            this.headingLabel3.Text = "Восстановление пароля";
             // 
             // recoveryButton1
             // 
@@ -734,22 +750,6 @@
             this.loginTextBox.Size = new System.Drawing.Size(294, 30);
             this.loginTextBox.TabIndex = 0;
             // 
-            // FullScreenPanel
-            // 
-            this.FullScreenPanel.AutoSize = true;
-            this.FullScreenPanel.BackColor = System.Drawing.Color.Transparent;
-            this.FullScreenPanel.Controls.Add(this.loginTabControl);
-            this.FullScreenPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FullScreenPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FullScreenPanel.Location = new System.Drawing.Point(0, 0);
-            this.FullScreenPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FullScreenPanel.Name = "FullScreenPanel";
-            this.FullScreenPanel.Size = new System.Drawing.Size(523, 604);
-            this.FullScreenPanel.TabIndex = 0;
-            this.FullScreenPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseDown);
-            this.FullScreenPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseMove);
-            this.FullScreenPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FullScreenPanel_MouseUp);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -762,13 +762,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.logForm_Load);
             this.loginTabControl.ResumeLayout(false);
+            this.FullScreenPanel.ResumeLayout(false);
             this.autoTabPage.ResumeLayout(false);
             this.autoTabPage.PerformLayout();
             this.regTabPage.ResumeLayout(false);
             this.regTabPage.PerformLayout();
             this.recTabPage.ResumeLayout(false);
             this.recTabPage.PerformLayout();
-            this.FullScreenPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -778,7 +778,7 @@
 
         private System.Windows.Forms.TabControl loginTabControl;
         private System.Windows.Forms.TabPage regTabPage;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label headingLabel2;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox regPassTextBox;
@@ -804,21 +804,21 @@
         private System.Windows.Forms.TextBox authPassTextBox;
         private System.Windows.Forms.TextBox authLoginTextBox;
         private System.Windows.Forms.TabPage recTabPage;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button closeButton2;
+        private System.Windows.Forms.Label loginLlabel;
+        private System.Windows.Forms.Label headingLabel3;
         private System.Windows.Forms.Button recoveryButton1;
         private System.Windows.Forms.TextBox loginTextBox;
         private System.Windows.Forms.Panel FullScreenPanel;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Button backButton2;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.MaskedTextBox phoneMaskedTextBox;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.WebBrowser captchaWebBrowser;
         private System.Windows.Forms.Button SettingsButton;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button userGuideButton;
         private System.Windows.Forms.TextBox capchaTextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label promptLabel;
     }
 }
 

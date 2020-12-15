@@ -123,6 +123,16 @@ namespace Innovative.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Iconsmind_Outline_Information {
+            get {
+                object obj = ResourceManager.GetObject("Iconsmind-Outline-Information", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shes55x552 {
             get {
                 object obj = ResourceManager.GetObject("shes55x552", resourceCulture);

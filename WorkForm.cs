@@ -76,7 +76,7 @@ namespace Innovative
         private void WorkForm_Load(object sender, EventArgs e)
         {
             workPath= ConfigurationManager.AppSettings.Get("path");
-            this.label2.Text = login;
+            this.loginLabel.Text = login;
             ftp.createZip(workPath + login);
             ftp.ListZip(workPath + login, ref listFilesServer);
         }

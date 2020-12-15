@@ -43,7 +43,7 @@ namespace Innovative
                 authLoginTextBox.Text = ConfigurationManager.AppSettings.Get("login");
                 authPassTextBox.Text = ConfigurationManager.AppSettings.Get("password");
             }
-            webBrowser1.Navigate("https://innosite.000webhostapp.com");
+            captchaWebBrowser.Navigate("https://innosite.000webhostapp.com");
             
              //  new MBform(webBrowser1.Document.Cookie);
             
@@ -118,8 +118,8 @@ namespace Innovative
             else
             {
 
-                webBrowser1.Refresh();
-                string str = webBrowser1.Document.Cookie;
+                captchaWebBrowser.Refresh();
+                string str = captchaWebBrowser.Document.Cookie;
                 string[] mas = new string[3];
                 if (str != null)
                 {
@@ -220,7 +220,7 @@ namespace Innovative
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             string[] mas= new string[3];
-            string str = webBrowser1.Document.Cookie;
+            string str = captchaWebBrowser.Document.Cookie;
             if (str != null)
             {
                 mas = str.Split('=');
