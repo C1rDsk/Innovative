@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -26,9 +27,11 @@ namespace Innovative
 
         private void recoveryButton1_Click(object sender, EventArgs e)
         {
-               saveFileDialog1.ShowDialog();
-               path = saveFileDialog1.FileName;
-               headingLabel.Text = path;
+            string path = null;
+            using (var dialog = new FolderBrowserDialog())
+                if (dialog.ShowDialog() == DialogResult.OK)
+                    path = dialog.SelectedPath + "\\";
+            ConfigurationManager.AppSettings.Set("path", path);
         }
 
         private void closeButton_Click(object sender, EventArgs e)

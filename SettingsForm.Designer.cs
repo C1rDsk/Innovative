@@ -31,8 +31,6 @@
             this.headingLabel = new System.Windows.Forms.Label();
             this.recoveryButton1 = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -40,10 +38,10 @@
             // 
             this.headingLabel.AutoSize = true;
             this.headingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.headingLabel.Font = new System.Drawing.Font("Roboto", 22F);
+            this.headingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
             this.headingLabel.Location = new System.Drawing.Point(171, 12);
             this.headingLabel.Name = "headingLabel";
-            this.headingLabel.Size = new System.Drawing.Size(207, 44);
+            this.headingLabel.Size = new System.Drawing.Size(205, 42);
             this.headingLabel.TabIndex = 13;
             this.headingLabel.Text = "Настройки";
             // 
@@ -52,7 +50,7 @@
             this.recoveryButton1.BackColor = System.Drawing.Color.Transparent;
             this.recoveryButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.recoveryButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.recoveryButton1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.recoveryButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.recoveryButton1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.recoveryButton1.Location = new System.Drawing.Point(168, 400);
             this.recoveryButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -73,7 +71,7 @@
             this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
             this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Font = new System.Drawing.Font("Roboto", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.closeButton.Image = global::Innovative.Properties.Resources.exit2;
             this.closeButton.Location = new System.Drawing.Point(444, 4);
             this.closeButton.Margin = new System.Windows.Forms.Padding(4);
@@ -82,10 +80,6 @@
             this.closeButton.TabIndex = 15;
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // panel1
             // 
@@ -125,8 +119,6 @@
         private System.Windows.Forms.Label headingLabel;
         private System.Windows.Forms.Button recoveryButton1;
         private System.Windows.Forms.Button closeButton;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Panel panel1;
     }
 }

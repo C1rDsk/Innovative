@@ -142,8 +142,9 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(60, 60);
             this.button5.TabIndex = 12;
-            this.button5.Text = "A";
+            this.button5.Text = "?";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // SettingsButton
             // 
@@ -232,6 +233,7 @@
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Запомнить";
             this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // passwordLabel
             // 

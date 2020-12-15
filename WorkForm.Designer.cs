@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Локальные файлы", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Локальные файлы", System.Windows.Forms.HorizontalAlignment.Left);
             this.buttonClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.listFilesServer = new System.Windows.Forms.ListView();
+            this.label2 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonClose
@@ -52,6 +57,7 @@
             this.buttonClose.Size = new System.Drawing.Size(53, 49);
             this.buttonClose.TabIndex = 9;
             this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // label1
             // 
@@ -66,31 +72,96 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Окно для работы";
             // 
+            // listFilesServer
+            // 
+            listViewGroup3.Header = "Локальные файлы";
+            listViewGroup3.Name = "listViewGroup1";
+            this.listFilesServer.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup3});
+            this.listFilesServer.HideSelection = false;
+            this.listFilesServer.Location = new System.Drawing.Point(24, 53);
+            this.listFilesServer.Name = "listFilesServer";
+            this.listFilesServer.Size = new System.Drawing.Size(505, 484);
+            this.listFilesServer.TabIndex = 11;
+            this.listFilesServer.UseCompatibleStateImageBehavior = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(286, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 25);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Login";
+            // 
             // listView1
             // 
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup4.Header = "Локальные файлы";
+            listViewGroup4.Name = "listViewGroup1";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
+            listViewGroup4});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(19, 58);
+            this.listView1.Location = new System.Drawing.Point(535, 53);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(505, 484);
-            this.listView1.TabIndex = 11;
+            this.listView1.TabIndex = 13;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Honeydew;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(24, 544);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(217, 51);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Загрузить файл";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RosyBrown;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button5.Location = new System.Drawing.Point(1004, 544);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(60, 60);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "?";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // WorkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.BackColor = System.Drawing.Color.Bisque;
+            this.ClientSize = new System.Drawing.Size(1067, 607);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.listFilesServer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WorkForm";
             this.Text = "WorkForm";
+            this.Load += new System.EventHandler(this.WorkForm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WorkForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WorkForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WorkForm_MouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,6 +171,10 @@
 
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView listFilesServer;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
     }
 }

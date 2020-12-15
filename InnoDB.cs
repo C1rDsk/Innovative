@@ -50,15 +50,15 @@ namespace Innovative
                 MySqlCommand com = new MySqlCommand("Select * from User where (login='" + login + "'or email='" + login + "') and password='" + pass + "'", this.getConnection());
                 if (com.ExecuteScalar() == null)
                 {
-                    new MBform("Логин/пароль неверный");
+                    new MBform("Логин/пароль неверный"+login+"/n"+pass);
                     return false;
                 }
                 else
                 {
-                    MySqlCommand com2 = new MySqlCommand("SELECT crypt,delfrompc,delfromzip from users where login='" + login + "'", connection);
-                    MySqlDataAdapter adapt = new MySqlDataAdapter(com2);
-                    DataSet ds = new DataSet();
-                    connection.Close();
+                    //MySqlCommand com2 = new MySqlCommand("SELECT crypt,delfrompc,delfromzip from users where login='" + login + "'", connection);
+                    //MySqlDataAdapter adapt = new MySqlDataAdapter(com2);
+                    //DataSet ds = new DataSet();
+                    //connection.Close();
                     return true;
                 }
             }

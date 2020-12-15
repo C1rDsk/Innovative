@@ -12,7 +12,7 @@ namespace Innovative
 {
     public partial class MBform : Form
     {
-        string message;
+       // string message;
         public MBform(string message)
         {
             InitializeComponent();
